@@ -8,7 +8,8 @@ import lombok.NoArgsConstructor;
 import java.util.UUID;
 
 /**
- * Created by jt on 2019-04-20.
+ * DTO (Data Transfer Object) que representa la información de una cerveza.
+ * Se utiliza para transferir datos entre las capas del sistema.
  */
 @Data
 @NoArgsConstructor

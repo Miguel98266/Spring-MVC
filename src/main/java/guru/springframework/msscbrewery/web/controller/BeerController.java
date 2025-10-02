@@ -11,8 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.UUID;
 
+
 /**
- * Created by jt on 2019-04-20.
+ * Controlador REST que maneja las solicitudes relacionadas con cervezas.
+ * Expone endpoints para obtener información de cervezas.
  */
 @RequestMapping("/api/v1/beer")
 @RestController
@@ -23,7 +25,11 @@ public class BeerController {
     public BeerController(BeerService beerService) {
         this.beerService = beerService;
     }
-
+    /**
+     * Endpoint para obtener una cerveza por su ID.
+     * @param beerId UUID de la cerveza.
+     * @return BeerDto con la información de la cerveza.
+     */
     @GetMapping({"/{beerId}"})
     public ResponseEntity<BeerDto> getBeer(@PathVariable("beerId") UUID beerId){
 
